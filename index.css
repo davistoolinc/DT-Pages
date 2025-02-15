@@ -58,7 +58,6 @@ header {
 main {
     /* padding: 1em; */
     background-color: var(--main-background);
-
     .hero-img {
         width: 100%;
         max-height: 400px;
@@ -66,18 +65,18 @@ main {
     }
 }
 
-.footer {
-    position: absolute;
-    bottom: 0; 
-    font-size: .8em;
+footer {
     display: flex;
+    position: relative;
+    bottom: 0;
+    font-size: .8em;
     width: 100%;
     /* padding: 1em; */
     align-content: center;
     justify-content: center;
     text-align: center;
     margin: 0 auto;
-
+    
     address {
         font-style: normal;
     }
