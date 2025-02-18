@@ -7,6 +7,7 @@ const currentYear = dateObject.getFullYear()
 
 renderContent()
 
+
 const navLinks = document.querySelector('.nav-links')
 const hamburgerBtn = document.querySelector('.hamburger')
 
@@ -30,8 +31,20 @@ function renderHeader() {
         <img src="Pictures/logo-img.jpg" alt="Davis Tool Incorporated logo">
     </div>
 
-    <p class="center-aligned"> Quality <span class="">Service</span> Value </p>
+    <p class="company-motto center-aligned"> Quality Service Value </p>
     <nav>
+    <div class="large-nav hidden">
+        <div>
+            <p> Quality Service Value </p>
+        </div>
+        <div class="right-aligned">
+            <a class="link" href="index.html">Home</a>
+            <a class="link" href="markets.html">Markets</a>
+            <a class="link" href="capabilities.html">Capabilities</a>
+            <a class="link" href="facility.html">Facility</a>
+            <a class="link" href="contact.html">Contact Us</a>
+        </div>
+    </div>
     <ul class="nav-links">
             <li><a class="link" href="index.html">Home</a></li>
             <li><a class="link" href="markets.html">Markets</a></li>
