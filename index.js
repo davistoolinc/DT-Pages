@@ -5,9 +5,23 @@ const addressSection = document.getElementById('address')
 const dateObject = new Date()
 const currentYear = dateObject.getFullYear()
 
+renderContent()
+
+const navLinks = document.querySelector('.nav-links')
+const hamburgerBtn = document.querySelector('.hamburger')
+
+document.addEventListener('click', (e) => {
+    [...e.target.classList].includes('nav-btn') ? handleNav(e) : ''
+})
+
 function renderContent() {
     renderHeader()
     renderFooter()
+}
+
+function handleNav(e) {
+    hamburgerBtn.classList.toggle('active')
+    navLinks.classList.toggle('active')
 }
 
 function renderHeader() {
@@ -17,23 +31,27 @@ function renderHeader() {
     </div>
 
     <p class="center-aligned"> Quality <span class="">Service</span> Value </p>
+    <nav>
+    <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="markets.html">Markets</a></li>
+            <li><a href="capabilities.html">Capabilities</a></li>
+            <li><a href="facility.html">Facility</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
     
-    <nav class="right-aligned">
-        <button type="button">|||</button>
-        <!-- <ul>
-            <li class="menuitem"><a href="Index.htm"><button class="metal linear">Home</button></a></li>
-            <li class="menuitem"><a href="DavisMarkets.htm"><button class="metal linear">Markets</button></a></li>
-            <li class="menuitem"><a href="DavisCapabilities.htm"><button class="metal linear">Capabilities</button></a></li>
-            <li class="menuitem"><a href="DavisFacility.htm"><button class="metal linear">Facility</button></a></li>
-            <li class="menuitem"><a href="DavisContact.htm"><button class="metal linear">Contact Us</button></a></li>
-        </ul> -->
+        <button type="button" class="hamburger right-aligned nav-btn">
+            <span class="nav-btn"></span>
+            <span class="nav-btn"></span>
+            <span class="nav-btn"></span>
+        </button>
     </nav>
- `
+`
 }
 
 function renderFooter() {
     footer.innerHTML = `
-            <p id="copyright"> Davis Tool Inc. &copy; ${currentYear} </p>
+            <p class="copyright" id="copyright"> Davis Tool Inc. &copy; ${currentYear} </p>
             <address class="right-aligned" id="address">
                 <!-- <a href="https://maps.app.goo.gl/mu9HZ1XKsb3fH4f36"> -->
                     10111 E. Montgomery Ave.
@@ -50,4 +68,3 @@ function renderFooter() {
     `
 }
 
-renderContent()
