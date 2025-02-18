@@ -33,11 +33,11 @@ function renderHeader() {
     <p class="center-aligned"> Quality <span class="">Service</span> Value </p>
     <nav>
     <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="markets.html">Markets</a></li>
-            <li><a href="capabilities.html">Capabilities</a></li>
-            <li><a href="facility.html">Facility</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a class="link" href="index.html">Home</a></li>
+            <li><a class="link" href="markets.html">Markets</a></li>
+            <li><a class="link" href="capabilities.html">Capabilities</a></li>
+            <li><a class="link" href="facility.html">Facility</a></li>
+            <li><a class="link" href="contact.html">Contact Us</a></li>
         </ul>
     
         <button type="button" class="hamburger right-aligned nav-btn">
