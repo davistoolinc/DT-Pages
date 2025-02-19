@@ -37,6 +37,7 @@ function renderHeader() {
         <div>
             <p> Quality Service Value </p>
         </div>
+        
         <div class="right-aligned">
             <a class="link" href="index.html">Home</a>
             <a class="link" href="markets.html">Markets</a>
@@ -45,13 +46,14 @@ function renderHeader() {
             <a class="link" href="contact.html">Contact Us</a>
         </div>
     </div>
+
     <ul class="nav-links">
-            <li><a class="link" href="index.html">Home</a></li>
-            <li><a class="link" href="markets.html">Markets</a></li>
-            <li><a class="link" href="capabilities.html">Capabilities</a></li>
-            <li><a class="link" href="facility.html">Facility</a></li>
-            <li><a class="link" href="contact.html">Contact Us</a></li>
-        </ul>
+        <li><a class="link" href="index.html">Home</a></li>
+        <li><a class="link" href="markets.html">Markets</a></li>
+        <li><a class="link" href="capabilities.html">Capabilities</a></li>
+        <li><a class="link" href="facility.html">Facility</a></li>
+        <li><a class="link" href="contact.html">Contact Us</a></li>
+    </ul>
     
         <button type="button" class="hamburger right-aligned nav-btn">
             <span class="nav-btn"></span>
@@ -64,20 +66,17 @@ function renderHeader() {
 
 function renderFooter() {
     footer.innerHTML = `
-            <p class="copyright" id="copyright"> Davis Tool Inc. &copy; ${currentYear} </p>
-            <address class="right-aligned" id="address">
-                <!-- <a href="https://maps.app.goo.gl/mu9HZ1XKsb3fH4f36"> -->
-                    10111 E. Montgomery Ave.
-                    <br />
-                    Spokane Valley, WA 99206
-                <!-- </a> -->
-                    <br />
-                <!-- <p> -->
-                    <!-- <a href="tel:+15098915568"> -->
-                    (509) 891-5568
-                <!-- </a> -->
-                <!-- </p> -->
-            </address>
+        <p class="copyright" id="copyright"> 
+            Davis Tool, Inc. &copy; ${currentYear} 
+        </p>
+
+        <address class="right-aligned" id="address">
+            10111 E. Montgomery Ave.
+            <br />
+            Spokane Valley, WA 99206
+            <br />
+            (509) 891-5568
+        </address>
     `
 }
 
