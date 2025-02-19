@@ -2,17 +2,18 @@
     --info-text: white;
     --main-background: white;
     --blue-text: #0033CC;
-    --davis-blue-background: #163972; 
+    --davis-blue-background: #163972;
     --davis-blue-background2: #1c478e;
-    --davis-blue-background3: linear-gradient(to bottom, #163972e8 0%,#1c478e 55%,#1c478e 100%);
-    --metal: linear-gradient(180deg, hsl(0,0%,78%)  0%, 
-        hsl(0,0%,90%) 47%, 
+    --davis-blue-background3: linear-gradient(to bottom,
+        #163972e8 0%,
+        #1c478e 55%,
+        #1c478e 100%);
+    --metal: linear-gradient(180deg, 
+        hsl(0,0%,78%)  0%,
+        hsl(0,0%,90%) 47%,
         hsl(0,0%,78%) 53%,
         hsl(0,0%,70%)100%);
-    --metal-shadow:linear-gradient hsl(0,0%,90%),
-        hsla(0,0%, 0%,.15) 0 -5px 6px 4px, 
-        hsla(0,0%,100%,.5) 0  5px 6px 4px;
-    --engraved-text: rgba(192, 192, 192, 0);
+    --engraved-text: rgba(0, 0, 0, 0.137);
 }
 
 *, *::after, *::before {
@@ -71,7 +72,8 @@ address {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
+    min-width: none;
 }
 
 .center-aligned {
@@ -87,18 +89,18 @@ address {
 
 iframe {
     width: 90vw;
+    max-width: 500px;
     height: 50vh;
 }
 
 header {
     display: flex;
-    min-height: max-content;
     height: 11%;
-    min-height: 50px;
+    min-height: 80px;
     width: 100%;
 
     p {
-        font-size: .7em;
+        font-size: .8em;
         transform: translateX(-10%);
         z-index: 1;
     }
@@ -111,7 +113,7 @@ header {
             z-index: 1;
             align-self: center;
             min-height: 100%;
-            width: 50px;
+            width: 75px;
             min-height: 30px;
         }
     }
@@ -124,8 +126,8 @@ header {
         align-content: space-between;
 
         .hamburger {
-            height: 50px;
-            min-width: 50px;
+            height: 40px;
+            width: 40px;
             position: relative;
 
             &:hover {
@@ -189,7 +191,7 @@ header {
                 
             li {
             margin: 20px;
-            
+
                 a {
                     font-weight: bolder;
                     text-decoration: none;
@@ -201,12 +203,11 @@ header {
                 }
             }
         }
-    
-        .nav-links.active {
-                left: 0;
-            }
-    }
 
+        .nav-links.active {
+            left: 0;
+        }
+    }
 }
 
 main {
@@ -217,6 +218,7 @@ main {
     font-size: .875em;
     background-color: var(--main-background);
     min-height: 82%;
+    max-width: 500px;
     div {
         display: flex;
         width: 100%;
@@ -267,21 +269,12 @@ footer {
     .copyright, .right-aligned {
         z-index: 1;
     }
-
-    
 }
 
-@media screen and (min-width: 810px) {
+@media screen and (min-width: 768px) {
     
-    .hamburger {
-        display: none;
-    }
-
-    .nav-links {
-            display: none;
-    }
-
-    .company-motto {
+    .hamburger, .nav-links, .company-motto {
+        min-height: 0px;
         display: none;
     }
 
@@ -301,14 +294,31 @@ footer {
         
         .large-nav {
             width: 100%;
-            display: flex;
+            display: flex !important;
             margin: auto 0 auto auto;
             
+            
             a {
-                padding: 0 10px;
-                margin: 0 10px;
+                font-size: 1.1em;
+                padding: 5px;
                 align-content: center;
-                word-wrap: normal;
+                min-width: max-content;
+                flex-wrap: nowrap;
+
+                &:hover {
+                    cursor: pointer;
+                    color: black;
+                    text-shadow: none;
+                    font-weight: bolder;
+                }
+
+                &:active {
+                    box-shadow: inset -1px -1px 1px black;
+                }
+
+                &:visited {
+                    color: blue;
+                }
             }
         }
     }
@@ -319,6 +329,15 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
+
+    header {
+        .img-container {
+            img {
+            width: 150px;
+        }
+        }
+        
+    }
 
     .grid {
         max-width: 70vw;
