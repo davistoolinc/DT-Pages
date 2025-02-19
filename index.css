@@ -96,7 +96,7 @@ iframe {
 header {
     display: flex;
     height: 11%;
-    min-height: 80px;
+    min-height: 100px;
     width: 100%;
 
     p {
@@ -117,8 +117,6 @@ header {
             min-height: 30px;
         }
     }
-
-    
 
     nav {
         display: flex;
@@ -271,7 +269,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     
     .hamburger, .nav-links, .company-motto {
         min-height: 0px;
@@ -286,49 +284,50 @@ footer {
                 width: 100px;
             }
         }
-    
-    nav {
-        width: 100%;
-        align-content: flex-end;
-        justify-content: center;
-        
-        .large-nav {
+
+        nav {
             width: 100%;
-            display: flex !important;
-            margin: auto 0 auto auto;
+            align-content: flex-end;
+            justify-content: center;
             
-            
-            a {
-                font-size: 1.1em;
-                padding: 5px;
-                align-content: center;
-                min-width: max-content;
-                flex-wrap: nowrap;
+            .large-nav {
+                width: 100%;
+                display: flex !important;
+                margin: auto 0 auto auto;
+                
+                
+                a {
+                    font-size: 1.1em;
+                    padding: 5px;
+                    align-content: center;
+                    min-width: max-content;
+                    flex-wrap: nowrap;
 
-                &:hover {
-                    cursor: pointer;
-                    color: black;
-                    text-shadow: none;
-                    font-weight: bolder;
-                }
+                    &:hover {
+                        cursor: pointer;
+                        color: black;
+                        text-shadow: none;
+                        font-weight: bolder;
+                    }
 
-                &:active {
-                    box-shadow: inset -1px -1px 1px black;
-                }
+                    &:active {
+                        box-shadow: inset -1px -1px 1px black;
+                    }
 
-                &:visited {
-                    color: blue;
+                    &:visited {
+                            color: blue;
+                    }
                 }
             }
         }
     }
-}
+
     .grid {
         grid-template-columns: auto auto;
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
 
     header {
         .img-container {
@@ -342,5 +341,12 @@ footer {
     .grid {
         max-width: 70vw;
         grid-template-columns: auto auto auto ;
+    }
+}
+
+@supports (-webkit-touch-callout: none) {
+    .large-nav {
+        visibility: hidden !important;
+        min-width: 0;
     }
 }
