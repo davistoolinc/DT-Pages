@@ -1,0 +1,342 @@
+:root {
+    --info-text: white;
+    --main-background: white;
+    --blue-text: #0033CC;
+    --davis-blue-background: #163972;
+    --davis-blue-background2: #1c478e;
+    --davis-blue-background3: linear-gradient(to bottom,
+        #163972e8 0%,
+        #1c478e 55%,
+        #1c478e 100%);
+    --metal: linear-gradient(180deg, 
+        hsl(0,0%,78%)  0%,
+        hsl(0,0%,90%) 47%,
+        hsl(0,0%,78%) 53%,
+        hsl(0,0%,70%)100%);
+    --engraved-text: rgba(0, 0, 0, 0.137);
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    max-height: auto;
+    min-width: 320px;
+    margin: 0 auto;
+    background: var(--main-background);
+    background-size: cover;
+    font-family: "Sawarabi Gothic",  Georgia, 'Times New Roman', Times, serif;
+    p {
+        text-align: left;
+    }
+}
+
+h1, h2, .link, .hamburger {
+    width: 100%;
+    max-width: 500px;
+    margin: .5em auto;
+    text-align: center;
+    background-image:var(--metal);
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px black;
+    text-shadow: 0px 1px 0px rgba(255,255,255,.3),
+    1px 0px 0px rgba(0,0,0,.7),
+    -1px 0px 0px rgba(255,255,255,.3);
+    font-weight: lighter;
+    color: var(--engraved-text);
+}
+
+h1 {
+    font-size: 3em;
+}
+
+header, footer {
+    background: var(--davis-blue-background2);
+    color: var(--info-text);
+}
+
+header, main, footer {
+    padding: 1.2em;
+}
+
+address {
+    font-style: normal;
+    text-align: center;
+
+    ul {
+        text-align: start;
+    }
+}
+
+iframe {
+    width: 90vw;
+    max-width: 500px;
+    height: 50vh;
+}
+
+.hidden {
+    display: none;
+    min-width: none;
+}
+
+.center-aligned {
+    margin: 0 auto;
+    text-align: center;
+    align-content: center;
+}
+
+.right-aligned {
+    margin: auto 0 auto auto;
+    text-align: end;
+}
+
+header {
+    display: flex;
+    height: 11%;
+    min-height: 100px;
+    width: 100%;
+}
+    
+header p {
+        font-size: .8em;
+        transform: translateX(-10%);
+        z-index: 1;
+}
+
+.img-container {
+    display: flex;
+    height: 100%;
+    padding-right: 20px;
+}
+
+header img {
+    z-index: 1;
+    align-self: center;
+    min-height: 100%;
+    width: 75px;
+    min-height: 30px;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+nav .hamburger {
+height: 40px;
+width: 40px;
+position: relative;
+}
+
+nav .hamburger:hover {
+    cursor: pointer;
+}
+
+nav .hamburger span {
+            height: 3px;
+            width: 90%;
+            max-width: inherit;
+            background-color: rgb(0, 0, 0);
+            border-radius: 25px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hamburger span:nth-child(1) {
+            top: 25%;
+            transition: .3 ease;
+        }
+
+        .hamburger span:nth-child(2) {
+            transition: .1s ease;
+        }
+
+        .hamburger span:nth-child(3) {
+            top: 75%;
+            transition: .3 ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition: .3s ease-in-out;
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+            transition: .3s ease;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            top: 50%;
+            transform: translate(-51%, 5%) rotate(-45deg);
+            transition: .3s ease-in-out;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            font-size: 2rem;
+            transition: .3s ease;
+            background-color: #1c478e;
+            min-height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 100%;
+            list-style: none;
+        }
+            .nav-links li{
+            margin: 20px;
+}
+.nav-links li a {
+    font-weight: bolder;
+    text-decoration: none;
+    border-radius: 15px;
+    min-width: 200px;
+    padding: 10px 20px;
+    font-weight: lighter;
+    text-shadow: 1px 1px 0px var(--davis-blue-background);
+}
+
+.nav-links.active {
+    left: 0;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    font-size: .875em;
+    background-color: var(--main-background);
+    min-height: 82%;
+    max-width: 500px;
+}
+
+main div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+main img {
+    border-radius: 15px;
+    }
+
+main .hero-img {
+    width: 100%;
+    max-width: 500px;
+    max-height: 400px;
+}
+
+main .facility-img {
+    width: 90vw;
+    max-height: 90vh;
+    max-width: 400px;
+}
+
+
+.grid {
+    display: grid;
+    width: 90vw;
+    gap: 2em;
+}
+
+.grid article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    min-height: 7%;
+    max-height: 20%;
+    font-size: .7em;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 0 auto;
+}
+
+.copyright, footer .right-aligned {
+    z-index: 1;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .hamburger, .nav-links, .company-motto {
+        min-height: 0px;
+        display: none;
+    }
+
+    header .img-container img {
+        min-height: 100%;
+        width: 100px;
+    }
+
+    header nav {
+        width: 100%;
+        align-content: flex-end;
+        justify-content: center;
+    }
+
+    header .large-nav {
+        width: 100%;
+        display: flex;
+        margin: auto 0 auto auto;
+    }
+
+    header .large-nav a {
+        font-size: 1.1em;
+        padding: 5px;
+        align-content: center;
+        min-width: max-content;
+        flex-wrap: nowrap;
+    }
+
+    header .large-nav a:hover {
+        cursor: pointer;
+        color: black;
+        text-shadow: none;
+        font-weight: bolder;
+    }
+
+    header .large-nav a:active {
+        box-shadow: inset -1px -1px 1px black;
+    }
+
+    header .large-nav a:visited {
+        color: blue;
+    }
+
+    .grid {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+
+    header .img-container img{
+        width: 150px;
+    }
+
+    .grid {
+        max-width: 70vw;
+        grid-template-columns: auto auto auto ;
+    }
+}
