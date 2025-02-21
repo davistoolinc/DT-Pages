@@ -7,7 +7,6 @@ const currentYear = dateObject.getFullYear()
 
 renderContent()
 
-
 const navLinks = document.querySelector('.nav-links')
 const hamburgerBtn = document.querySelector('.hamburger')
 
@@ -79,4 +78,3 @@ function renderFooter() {
         </address>
     `
 }
-
