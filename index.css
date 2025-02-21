@@ -78,7 +78,7 @@ iframe {
 }
 
 .hidden {
-    display: none !important;
+    display: none;
     min-width: none;
 }
 
@@ -296,7 +296,7 @@ footer {
 
     header .large-nav {
         width: 100%;
-        display: flex !important;
+        display: flex;
         margin: auto 0 auto auto;
     }
 
@@ -322,7 +322,7 @@ footer {
     header .large-nav a:visited {
         color: blue;
     }
-    
+
     .grid {
         grid-template-columns: auto auto;
     }
@@ -334,16 +334,9 @@ footer {
     header .img-container img{
         width: 150px;
     }
-    
+
     .grid {
         max-width: 70vw;
         grid-template-columns: auto auto auto ;
-    }
-}
-
-@supports (-webkit-touch-callout: none) {
-    .large-nav {
-        visibility: hidden !important;
-        min-width: 0;
     }
 }
