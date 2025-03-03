@@ -71,7 +71,7 @@ function renderFooter() {
             <br />
             Spokane Valley, WA 99206
             <br />
-            <a href="tel:1-509-891-5568">(509) 891-5568</a>
+            &#128222 <a href="tel:1-509-891-5568"> (509) 891-5568</a>
         </address>
     `
 }
