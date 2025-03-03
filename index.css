@@ -33,6 +33,7 @@ h1, h2 {
     max-width: 500px;
     text-align: center;
     padding: .8rem;
+    margin: 15px auto;
 }
 
 h1 {
@@ -94,6 +95,7 @@ iframe {
 header {
     display: flex;
     position: fixed;
+    top: 0;
     height: 11dvh;
     min-height: 100px;
     max-height: 13dvh;
@@ -221,10 +223,10 @@ ul.nav-links .menu-link {
     }
 }
 
-main {
+body main {
     display: flex;
     flex-direction: column;
-    margin: auto 11vh auto;
+    margin: 105px auto 11vh auto;
     align-items: center;
     font-size: .875rem;
     background-color: var(--main-background);
@@ -238,12 +240,6 @@ main p {
     padding: 0 1dvh;
 }
 
-main div {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
 main img {
     width: 90dvw;
     max-width: 500px;
@@ -253,7 +249,6 @@ main img {
 article {
     display: flex;
     flex-direction: column;
-    align-items: center;
     flex-wrap: wrap;
 }
 
