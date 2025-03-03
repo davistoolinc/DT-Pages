@@ -21,8 +21,9 @@
 }
 
 body {
-    height: 100vh;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
     background: var(--main-background);
     background-size: cover;
     font-family: "Sawarabi Gothic",  Georgia, 'Times New Roman', Times, serif;
@@ -33,7 +34,7 @@ h1, h2 {
     max-width: 500px;
     text-align: center;
     padding: .8rem;
-    margin: 15px auto;
+    margin: 15px auto 0;
 }
 
 h1 {
@@ -94,7 +95,7 @@ iframe {
 
 header {
     display: flex;
-    position: fixed;
+    position: sticky;
     top: 0;
     height: 11dvh;
     min-height: 100px;
@@ -226,12 +227,12 @@ ul.nav-links .menu-link {
 body main {
     display: flex;
     flex-direction: column;
-    margin: 105px auto 11vh auto;
+    margin: 10px auto;
     align-items: center;
     font-size: .875rem;
     background-color: var(--main-background);
-    min-height: 82%;
     max-width: 500px;
+    min-height: 82vh;
 }
 
 main p {
@@ -240,10 +241,11 @@ main p {
     padding: 0 1dvh;
 }
 
-main img {
+main img, main iframe {
     width: 90dvw;
     max-width: 500px;
     box-shadow: 0px 1px 5px black;
+    margin-top: 15px;
 }
 
 article {
@@ -255,12 +257,10 @@ article {
 footer {
     display: flex;
     min-height: 7%;
-    max-height: 20%;
     font-size: .7em;
     width: 100%;
     align-items: center;
     text-align: center;
-    padding: 0 auto;
 
     & a {
         color: white;
