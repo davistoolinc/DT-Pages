@@ -27,19 +27,21 @@ body {
     background: var(--main-background);
     background-size: cover;
     font-family: "Sawarabi Gothic",  Georgia, 'Times New Roman', Times, serif;
+    min-height: 100vh;
 }
 
 h1, h2 {
     width: 90vw;
     max-width: 500px;
     text-align: center;
-    padding: .8rem;
-    margin: 15px auto 0;
+    
+    margin: 15px auto;
 }
 
 h1 {
     background-color: var(--davis-blue-background2);
     box-shadow: 0px 0px 5px black;
+    padding: .8rem;
     font-size: 2.5rem;
     font-weight: lighter;
     color: white;
@@ -48,8 +50,6 @@ h1 {
 h2 {
     justify-self: center;
     color: var(--blue-text);
-    box-shadow: 0px 0px 5px black;
-    text-shadow: 0px 0px 1px var(--blue-text);
 }
 
 header, footer {
@@ -232,7 +232,6 @@ body main {
     font-size: .875rem;
     background-color: var(--main-background);
     max-width: 500px;
-    min-height: 82vh;
 }
 
 main p {
@@ -245,7 +244,6 @@ main img, main iframe {
     width: 90dvw;
     max-width: 500px;
     box-shadow: 0px 1px 5px black;
-    margin-top: 15px;
 }
 
 article {
@@ -255,6 +253,7 @@ article {
 }
 
 footer {
+    margin-top: auto;
     display: flex;
     min-height: 7%;
     font-size: .7em;
