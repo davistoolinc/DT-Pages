@@ -34,19 +34,11 @@ function renderHeader() {
     
     <nav>
         <ul class="large-nav hidden">
-            <li><a class="menu-link" href="index.html">Home</a></li>
-            <li><a class="menu-link" href="markets.html">Markets</a></li>
-            <li><a class="menu-link" href="capabilities.html">Capabilities</a></li>
-            <li><a class="menu-link" href="facility.html">Facility</a></li>
-            <li><a class="menu-link" href="contact.html">Contact Us</a></li>
+            ${renderNavLinks()}
         </ul>
 
         <ul class="nav-links">
-            <li><a class="menu-link" href="index.html">Home</a></li>
-            <li><a class="menu-link" href="markets.html">Markets</a></li>
-            <li><a class="menu-link" href="capabilities.html">Capabilities</a></li>
-            <li><a class="menu-link" href="facility.html">Facility</a></li>
-            <li><a class="menu-link" href="contact.html">Contact Us</a></li>
+            ${renderNavLinks()}
         </ul>
 
         <button type="button" class="hamburger right-aligned nav-btn">
@@ -72,4 +64,14 @@ function renderFooter() {
             &#128222 <a href="tel:1-509-891-5568"> (509) 891-5568</a>
         </address>
     `
+}
+
+function renderNavLinks() {
+    return `
+            <li><a class="menu-link" href="index.html">Home</a></li>
+            <li><a class="menu-link" href="markets.html">Markets</a></li>
+            <li><a class="menu-link" href="capabilities.html">Capabilities</a></li>
+            <li><a class="menu-link" href="facility.html">Facility</a></li>
+            <li><a class="menu-link" href="contact.html">Contact Us</a></li>
+        `
 }
