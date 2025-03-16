@@ -83,7 +83,7 @@ iframe {
 }
 
 .center-aligned {
-    margin: 0 auto;
+    margin: auto;
     text-align: center;
     align-content: center;
 }
@@ -129,6 +129,7 @@ nav .hamburger {
     height: 40px;
     width: 40px;
     position: relative;
+    -webkit-border-radius: 0px;
     }
 
 nav .hamburger:hover {
@@ -289,9 +290,16 @@ footer {
     }
 
     header .large-nav {
-        width: 100%;
         display: flex;
         margin: auto 0 auto auto;
+    }
+
+    header .large-nav p::after {
+    content: " | ";
+    }
+
+    header .large-nav :last-child::after {
+        content: "";
     }
 
     header .large-nav a {
