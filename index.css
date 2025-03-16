@@ -130,6 +130,7 @@ nav .hamburger {
     width: 40px;
     position: relative;
     -webkit-border-radius: 0px;
+    border-radius: 0px;
     }
 
 nav .hamburger:hover {
@@ -294,8 +295,12 @@ footer {
         margin: auto 0 auto auto;
     }
 
-    header .large-nav p::after {
-    content: " | ";
+    header .large-nav li {
+        list-style: none;
+    }
+
+    header .large-nav li::after {
+    content: "| ";
     }
 
     header .large-nav :last-child::after {

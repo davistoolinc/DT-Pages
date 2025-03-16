@@ -33,15 +33,13 @@ function renderHeader() {
     <aside class="company-motto center-aligned"> Quality, Service, Value </aside>
     
     <nav>
-        <div class="large-nav hidden">
-            <div class="right-aligned">
-                <a class="menu-link" href="index.html">Home</a>
-                <a class="menu-link" href="markets.html">Markets</a>
-                <a class="menu-link" href="capabilities.html">Capabilities</a>
-                <a class="menu-link" href="facility.html">Facility</a>
-                <a class="menu-link" href="contact.html">Contact Us</a>
-            </div>
-        </div>
+        <ul class="large-nav hidden">
+            <li><a class="menu-link" href="index.html">Home</a></li>
+            <li><a class="menu-link" href="markets.html">Markets</a></li>
+            <li><a class="menu-link" href="capabilities.html">Capabilities</a></li>
+            <li><a class="menu-link" href="facility.html">Facility</a></li>
+            <li><a class="menu-link" href="contact.html">Contact Us</a></li>
+        </ul>
 
         <ul class="nav-links">
             <li><a class="menu-link" href="index.html">Home</a></li>
@@ -50,12 +48,12 @@ function renderHeader() {
             <li><a class="menu-link" href="facility.html">Facility</a></li>
             <li><a class="menu-link" href="contact.html">Contact Us</a></li>
         </ul>
-        
-            <button type="button" class="hamburger right-aligned nav-btn">
-                <span class="nav-btn"></span>
-                <span class="nav-btn"></span>
-                <span class="nav-btn"></span>
-            </button>
+
+        <button type="button" class="hamburger right-aligned nav-btn">
+            <span class="nav-btn"></span>
+            <span class="nav-btn"></span>
+            <span class="nav-btn"></span>
+        </button>
     </nav>
 `
 }
