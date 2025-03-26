@@ -20,6 +20,45 @@
     box-sizing: border-box;
 }
 
+/* Icomoon Imports */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?11yix9');
+    src:  url('fonts/icomoon.eot?11yix9#iefix') format('embedded-opentype'),
+      url('./fonts/icomoon.ttf?11yix9') format('truetype'),
+      url('./fonts/icomoon.woff?11yix9') format('woff'),
+      url('./fonts/icomoon.svg?11yix9#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-phone:before {
+    content: "\e942";
+  }
+  .icon-envelop:before {
+    content: "\e945";
+  }
+  .icon-location:before {
+    content: "\e947";
+  }
+/* End Icomoon imports */
+
 body {
     display: flex;
     flex-direction: column;
@@ -34,7 +73,6 @@ h1, h2 {
     width: 90vw;
     max-width: 500px;
     text-align: center;
-    
     margin: 15px auto;
 }
 
@@ -56,6 +94,11 @@ header, footer {
     background: var(--davis-blue-background2);
     color: var(--info-text);
     padding: 1rem 1.2rem;
+    z-index: 1;
+}
+
+a {
+    text-decoration: none;
 }
 
 address {
@@ -129,8 +172,11 @@ nav .hamburger {
     height: 40px;
     width: 40px;
     position: relative;
+    appearance: none;
     -webkit-border-radius: 0px;
-    border-radius: 0px;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.137);
     }
 
 nav .hamburger:hover {
@@ -139,8 +185,8 @@ nav .hamburger:hover {
 
 nav .hamburger span {
     height: 3px;
-    width: 90%;
-    background-color: rgb(0, 0, 0);
+    width: 60%;
+    background-color: rgb(245, 245, 245);
     border-radius: 25px;
     position: absolute;
     top: 50%;
@@ -174,8 +220,8 @@ nav .hamburger span {
 }
 
 .hamburger.active span:nth-child(3) {
-    top: 50%;
-    transform: translate(-51%, 5%) rotate(-45deg);
+    top: 53%;
+    transform: translate(-50%, -50%) rotate(-45deg);
     transition: .3s ease-in-out;
 }
 
@@ -229,11 +275,11 @@ ul.nav-links .menu-link {
 body main {
     display: flex;
     flex-direction: column;
-    margin: 10px auto;
+    margin: 3vh auto;
     align-items: center;
     font-size: .875rem;
     background-color: var(--main-background);
-    max-width: 500px;
+    max-width: 800px;
 }
 
 main p {
@@ -244,8 +290,9 @@ main p {
 
 main img, main iframe {
     width: 90dvw;
-    max-width: 500px;
-    box-shadow: 0px 1px 5px black;
+    max-width: 800px;
+    box-shadow: 0px 0px 10px black, 
+    0px 0px 20px rgba(50, 50, 50, 0.6);
 }
 
 article {
@@ -258,14 +305,15 @@ footer {
     margin-top: auto;
     display: flex;
     min-height: 7%;
-    font-size: .7em;
+    font-size: 1.2em;
     width: 100%;
     align-items: center;
     text-align: center;
+}
+footer a {
+    color: white;
+    padding: 10px;
 
-    & a {
-        color: white;
-    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -274,8 +322,7 @@ footer {
     }
 
     header img {
-        min-height: 100%;
-        width: 100px;
+        max-height: 13dvh;
     }
 
     .company-motto, .center-aligned {
@@ -297,14 +344,13 @@ footer {
 
     header .large-nav li {
         list-style: none;
+        height: 90%;
+        padding: 0 1vw 0;
+        border-right: 2px solid rgb(255, 255, 255);
     }
 
-    header .large-nav li::after {
-    content: "| ";
-    }
-
-    header .large-nav :last-child::after {
-        content: "";
+    header .large-nav :last-child {
+        border-right: none;
     }
 
     header .large-nav a {
@@ -312,24 +358,19 @@ footer {
         padding: 5px;
         align-content: center;
         min-width: max-content;
-        color: white;
+        color: rgb(255, 255, 255);
         text-shadow: 1px 1px 1px black;
     }
 
     header .large-nav a:hover {
         cursor: pointer;
-        color: black;
-        text-shadow: none;
+        color: rgb(252, 255, 156);
+        transition: .6s;
         font-weight: bolder;
+        text-decoration: underline;
     }
 
     header .large-nav a:active {
         box-shadow: inset -1px -1px 1px black;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-    header img{
-        width: 150px;
     }
 }
