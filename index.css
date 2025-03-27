@@ -241,6 +241,7 @@ nav .hamburger span {
     top: 0;
     left: 100%;
     list-style: none;
+    z-index: -1;
 }
 
 .nav-links li{
