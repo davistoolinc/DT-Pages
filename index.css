@@ -168,7 +168,9 @@ nav {
     align-content: space-between;
 }
 
-nav .hamburger {
+/* styling for the checkbox label */
+nav .hamburger-btn {
+    margin: auto;
     height: 40px;
     width: 40px;
     position: relative;
@@ -179,11 +181,16 @@ nav .hamburger {
     background-color: rgba(0, 0, 0, 0.137);
     }
 
-nav .hamburger:hover {
+nav .hamburger-btn:hover {
     cursor: pointer;
 }
 
-nav .hamburger span {
+/* visually hide the checkbox itself */
+#hamburger {
+    display: none;
+}
+
+nav .hamburger-btn span {
     height: 3px;
     width: 60%;
     background-color: rgb(245, 245, 245);
@@ -194,32 +201,32 @@ nav .hamburger span {
     transform: translate(-50%, -50%);
 }
 
-.hamburger span:nth-child(1) {
+.hamburger-btn span:nth-child(1) {
     top: 25%;
     transition: .3 ease;
 }
 
-.hamburger span:nth-child(2) {
+.hamburger-btn span:nth-child(2) {
     transition: .1s ease;
 }
 
-.hamburger span:nth-child(3) {
+.hamburger-btn span:nth-child(3) {
     top: 75%;
     transition: .3 ease;
 }
 
-.hamburger.active span:nth-child(1) {
+.hamburger:checked ~ .hamburger-btn span:nth-child(1) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
     transition: .3s ease-in-out;
 }
 
-.hamburger.active span:nth-child(2) {
+.hamburger:checked ~ .hamburger-btn span:nth-child(2) {
     opacity: 0;
     transition: .3s ease;
 }
 
-.hamburger.active span:nth-child(3) {
+.hamburger:checked ~ .hamburger-btn span:nth-child(3) {
     top: 53%;
     transform: translate(-50%, -50%) rotate(-45deg);
     transition: .3s ease-in-out;
@@ -241,6 +248,7 @@ nav .hamburger span {
     top: 0;
     left: 100%;
     list-style: none;
+    z-index: -1;
 }
 
 .nav-links li{
@@ -257,7 +265,7 @@ nav .hamburger span {
     text-shadow: 1px 1px 0px var(--davis-blue-background);
 }
 
-.nav-links.active {
+.hamburger:checked ~ .nav-links {
     left: 0;
 }
 

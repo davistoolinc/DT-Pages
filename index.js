@@ -12,20 +12,6 @@ function renderContent() {
     renderFooter()
 }
 
-const navLinks = document.querySelector('.nav-links')
-const hamburgerBtn = document.querySelector('.hamburger')
-
-document.addEventListener('click', (e) => {
-    [...e.target.classList].includes('nav-btn') ? handleNav(e) : ''
-})
-
-
-
-function handleNav(e) {
-    hamburgerBtn.classList.toggle('active')
-    navLinks.classList.toggle('active')
-}
-
 function renderHeader() {
  header.innerHTML = `
     <img src="Pictures/logo-img.jpg" alt="Davis Tool Incorporated logo">
@@ -33,6 +19,14 @@ function renderHeader() {
     <aside class="company-motto center-aligned"> Quality, Service, Value </aside>
     
     <nav>
+        <input type="checkbox" id="hamburger" class="hamburger right-aligned nav-btn">
+        </input>
+        <label for="hamburger" class="hamburger-btn" aria-label="Open navigation menu">
+            <span class="nav-btn"></span>
+            <span class="nav-btn"></span>
+            <span class="nav-btn"></span>
+        </label>
+
         <ul class="large-nav hidden">
             ${renderNavLinks()}
         </ul>
@@ -41,11 +35,7 @@ function renderHeader() {
             ${renderNavLinks()}
         </ul>
 
-        <button type="button" class="hamburger right-aligned nav-btn" aria-label="Open navigation menu">
-            <span class="nav-btn"></span>
-            <span class="nav-btn"></span>
-            <span class="nav-btn"></span>
-        </button>
+        
     </nav>
 `
 }
