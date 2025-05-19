@@ -3,17 +3,8 @@
     --main-background: white;
     --blue-text: #0033CC;
     --davis-blue-background: #163972;
-    --davis-blue-background2: #1c478e;
-    --davis-blue-background3: linear-gradient(to bottom,
-        #163972e8 0%,
-        #1c478e 55%,
-        #1c478e 100%);
-    --metal: linear-gradient(180deg, 
-        hsl(0,0%,78%)  0%,
-        hsl(0,0%,90%) 47%,
-        hsl(0,0%,78%) 53%,
-        hsl(0,0%,70%)100%);
-    --engraved-text: rgba(0, 0, 0, 0.137);
+    --davis-blue-background2: rgb(28, 72, 142);
+    --transparent: rgba(0, 0, 0, 0)
 }
 
 *, *::after, *::before {
@@ -149,23 +140,27 @@ header {
     
 header aside {
     font-size: .8em;
+    width: max-content;
 }
 
+header section {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
 .copyright, footer .right-aligned, header aside, header img {
     z-index: 1;
 }
 
 header img {
     align-self: center;
-    min-height: 100%;
-    width: 75px;
+    max-height: 50%;
     min-height: 30px;
 }
 
 nav {
     display: flex;
-    flex-direction: column;
-    align-content: space-between;
+    width: 100%;
 }
 
 nav .hamburger {
@@ -176,7 +171,7 @@ nav .hamburger {
     -webkit-border-radius: 0px;
     border-radius: 50%;
     border: 2px solid rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.137);
+    background-color: var(--transparent);
     }
 
 nav .hamburger:hover {
@@ -322,14 +317,18 @@ footer a {
         display: none;
     }
 
-    header img {
-        max-height: 13dvh;
+    header section {
+        display: flex;
     }
 
-    .company-motto, .center-aligned {
-        margin-left: 10px;
-        width: 30%;
-        text-align: start;
+    header aside {
+        align-content: center;
+        padding-bottom: 3px;
+
+    }
+
+    header img {
+        max-height: 14dvh;
     }
 
     header nav {
