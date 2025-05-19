@@ -14,10 +14,11 @@ function renderContent() {
 
 function renderHeader() {
  header.innerHTML = `
-    <img src="Pictures/logo-img.jpg" alt="Davis Tool Incorporated logo">
+    <section >
+        <img src="Pictures/logo-img.jpg" alt="Davis Tool Incorporated logo">
 
-    <aside class="company-motto center-aligned"> Quality, Service, Value </aside>
-    
+        <aside class="company-motto"> Quality, Service, Value </aside>
+    </section>
     <nav>
         <input type="checkbox" id="hamburger" class="hamburger right-aligned nav-btn">
         </input>
