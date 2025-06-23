@@ -343,6 +343,10 @@ footer a {
         justify-content: center;
     }
 
+    nav .hamburger-btn {
+        display: none;
+    }
+
     header .large-nav {
         display: flex;
         margin: auto 0 auto auto;
