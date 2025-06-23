@@ -1,0 +1,32 @@
+    <section >
+        <img src="Pictures/logo-img.jpg" alt="Davis Tool Incorporated logo">
+    </section>
+
+    <section class="title">
+    <h1>${title}</h1>
+    </section>
+    <nav>
+        <input type="checkbox" id="hamburger" class="hamburger right-aligned nav-btn">
+        </input>
+        <label for="hamburger" class="hamburger-btn" aria-label="Open navigation menu">
+            <span class="nav-btn"></span>
+            <span class="nav-btn"></span>
+            <span class="nav-btn"></span>
+        </label>
+        
+        <ul class="large-nav hidden">
+            <li><a class="menu-link" href="index.html">Home</a></li>
+            <!-- <li><a class="menu-link" href="markets.html">Markets</a></li> -->
+            <li><a class="menu-link" href="capabilities.html">Capabilities</a></li>
+            <li><a class="menu-link" href="facility.html">Facility</a></li>
+            <li><a class="menu-link" href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <ul class="nav-links">
+            <li><a class="menu-link" href="index.html">Home</a></li>
+            <!-- <li><a class="menu-link" href="markets.html">Markets</a></li> -->
+            <li><a class="menu-link" href="capabilities.html">Capabilities</a></li>
+            <li><a class="menu-link" href="facility.html">Facility</a></li>
+            <li><a class="menu-link" href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
