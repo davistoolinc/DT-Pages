@@ -15,7 +15,7 @@ function renderContent() {
 
 function renderHeader() {
  header.innerHTML = `
-    <section >
+    <section class="logo">
         <img src="Pictures/logo-img.jpg" alt="Davis Tool Incorporated logo">
     </section>
 
@@ -30,20 +30,16 @@ function renderHeader() {
             <span class="nav-btn"></span>
             <span class="nav-btn"></span>
         </label>
-        
-        <ul class="large-nav hidden">
-            ${renderNavLinks()}
-        </ul>
 
         <ul class="nav-links">
             ${renderNavLinks()}
         </ul>
-
-        
     </nav>
 `
 }
-
+//<ul class="large-nav hidden">
+//            ${renderNavLinks()}
+//        </ul>
 function renderFooter() {
     footer.innerHTML = `
         <address id="contact-information">
