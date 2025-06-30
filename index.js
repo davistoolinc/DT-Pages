@@ -5,13 +5,34 @@ const addressSection = document.getElementById('address')
 const dateObject = new Date()
 const currentYear = dateObject.getFullYear()
 const title = document.title
+const currURL = window.location.href.split('/')
+// console.log(currURL[3])
 
 renderContent()
+
 
 function renderContent() {
     renderHeader()
     renderFooter()
+    changeCurrLink()
 }
+
+function changeCurrLink() {
+    const linkList = document.querySelectorAll('.menu-link')
+    const currPage = findCurrPage()
+    const linkToChange = linkList[currPage].classList
+    linkToChange.add('current-page')
+    console.log(linkToChange)
+}
+
+function findCurrPage() {
+    const linkList = document.querySelectorAll('.menu-link')
+    const urlList = []
+    linkList.forEach(item => urlList.push(item.getAttribute('href')))
+    const isCurrURL = url => url === currURL[3]
+    return urlList.findIndex(isCurrURL)
+}
+
 
 function renderHeader() {
  header.innerHTML = `
@@ -63,3 +84,4 @@ function renderNavLinks() {
         <li><a class="menu-link" href="contact.html">Contact Us</a></li>
     `
 }
+

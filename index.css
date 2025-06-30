@@ -74,7 +74,7 @@ section.title h1 {
 header, footer {
     background: var(--davis-blue-background2);
     color: var(--info-text);
-    padding: 1rem 1.2rem;
+    padding: 1rem 4vw;
     z-index: 1;
 }
 
@@ -179,7 +179,8 @@ nav .hamburger-btn {
     border-radius: 50%;
     border: 2px solid rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.137);
-    }
+    z-index: 1;
+}
 
 .hamburger-btn span {
     display: block;
@@ -257,7 +258,7 @@ nav .hamburger-btn {
 
 .hamburger:checked ~ .nav-links {
     transition: .2s ease-in; 
-    translate: calc(-100vw + 1.2rem); /* Transitions original 100vw plus the extra 1.2rem of header padding */
+    translate: -90vw; /* Transitions original 100vw plus the extra 1.2rem of header padding */
     box-sizing: content-box;
     margin: auto;
 }
@@ -327,10 +328,16 @@ footer a {
     }
 
     header {
-        display: grid;
+        /* display: grid;
         grid-template-areas: 
         "logo title"
-        "logo links";
+        "logo links"; */
+        /* display: flex; */
+        align-content: center;
+        align-items: center;
+        margin: auto;
+        max-height: max-content;
+        height: auto;
     }
 
     header section.logo {
@@ -350,6 +357,11 @@ footer a {
         justify-content: center;
     }
 
+    header h1 {
+        font-size: 1.5rem;
+        display: none;
+    }
+
     nav .hamburger-btn {
         display: none;
     }
@@ -364,6 +376,7 @@ footer a {
         margin: auto 0 auto auto;
         padding: 0;
         align-content: center;
+        transition: none;
     }
 
     header .nav-links li {
@@ -397,19 +410,11 @@ footer a {
     header ul.nav-links .menu-link {
         width: max-content;
         background-color: transparent;
-        padding: 0;
+        /* padding: 0; */
 
     }
 
-    header .large-nav a:hover {
-        cursor: pointer;
-        color: rgb(252, 255, 156);
-        transition: .6s;
-        font-weight: bolder;
-        text-decoration: underline;
-    }
-
-    header .large-nav a:active {
-        box-shadow: inset -1px -1px 1px black;
+    .nav-links .current-page {
+        color: rgb(233, 233, 16);
     }
 }
