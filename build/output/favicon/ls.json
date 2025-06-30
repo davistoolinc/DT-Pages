@@ -1,0 +1,33 @@
+{
+	"files": [
+		{
+			"name": "android-chrome-192x192.png",
+			"path": "/favicon/android-chrome-192x192.png"
+		},
+		{
+			"name": "android-chrome-512x512.png",
+			"path": "/favicon/android-chrome-512x512.png"
+		},
+		{
+			"name": "apple-touch-icon.png",
+			"path": "/favicon/apple-touch-icon.png"
+		},
+		{
+			"name": "favicon-16x16.png",
+			"path": "/favicon/favicon-16x16.png"
+		},
+		{
+			"name": "favicon-32x32.png",
+			"path": "/favicon/favicon-32x32.png"
+		},
+		{
+			"name": "favicon.ico",
+			"path": "/favicon/favicon.ico"
+		},
+		{
+			"name": "site.webmanifest",
+			"path": "/favicon/site.webmanifest"
+		}
+	],
+	"folders": []
+}
