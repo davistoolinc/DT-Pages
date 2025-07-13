@@ -6,10 +6,10 @@ const dateObject = new Date()
 const currentYear = dateObject.getFullYear()
 const title = document.title
 const currURL = window.location.href.split('/')
-// console.log(currURL[3])
 
 renderContent()
 
+const hamburgerCheckbox = document.getElementById('hamburger')
 
 function renderContent() {
     renderHeader()
@@ -22,11 +22,10 @@ function changeCurrLink() {
     const currPage = findCurrPage()
     const linkToChange = linkList[currPage].classList
     linkToChange.add('current-page')
-    console.log(linkToChange)
 }
 
 function findCurrPage() {
-    const linkList = document.querySelectorAll('.menu-link')
+    const linkList = document.querySelectorAll('.menu-link') // I don't like this is done twice.. 
     const urlList = []
     linkList.forEach(item => urlList.push(item.getAttribute('href')))
     const isCurrURL = url => url === currURL[3]
@@ -58,9 +57,7 @@ function renderHeader() {
     </nav>
 `
 }
-//<ul class="large-nav hidden">
-//            ${renderNavLinks()}
-//        </ul>
+
 function renderFooter() {
     footer.innerHTML = `
         <address id="contact-information">
@@ -84,4 +81,8 @@ function renderNavLinks() {
         <li><a class="menu-link" href="contact.html">Contact Us</a></li>
     `
 }
+
+window.addEventListener('resize', () => {
+    window.innerWidth > 768 ? hamburgerCheckbox.checked = false : ''
+}, true)
 

@@ -65,7 +65,6 @@ section.title h1 {
 }
 
  h2 {
-    /* width: 90vw; */
     max-width: 500px;
     text-align: center;
     margin: 15px auto;
@@ -74,7 +73,7 @@ section.title h1 {
 header, footer {
     background: var(--davis-blue-background2);
     color: var(--info-text);
-    padding: 1rem 4vw;
+    padding: 1vw 4vw;
     z-index: 1;
 }
 
@@ -123,7 +122,6 @@ header {
     height: 11dvh;
     min-height: 100px;
     max-height: 13dvh;
-    width: 100%;
     box-shadow: 1px 1px 10px black;
     justify-content: space-between;
 }
@@ -146,9 +144,7 @@ header img {
 }
 
 nav {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+    display: flex;
 }
 
 #hamburger {
@@ -188,7 +184,7 @@ nav .hamburger-btn {
     width: 60%;
     background-color: rgb(245, 245, 245);
     border-radius: 25px;
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -233,7 +229,7 @@ nav .hamburger-btn {
     align-items: center;
     text-align: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 2em;
     background-color: #1c478e;
     min-height: 100vh;
     width: 100%;
@@ -241,10 +237,11 @@ nav .hamburger-btn {
     translate: 100vw;
     list-style: none;
     transition: .2s ease-out;
+    padding-right: 1vw;
 }
 
 .nav-links li {
-    margin: 2.5%;
+    margin: 2vh 0;
 }
 
 .nav-links li a {
@@ -258,9 +255,8 @@ nav .hamburger-btn {
 
 .hamburger:checked ~ .nav-links {
     transition: .2s ease-in; 
-    translate: -90vw; /* Transitions original 100vw plus the extra 1.2rem of header padding */
+    translate: -94vw;
     box-sizing: content-box;
-    margin: auto;
 }
 
 ul.nav-links .menu-link {
@@ -280,7 +276,6 @@ body main {
     align-items: center;
     font-size: .875rem;
     background-color: var(--main-background);
-    
 }
 
 main p {
@@ -328,25 +323,8 @@ footer a {
     }
 
     header {
-        /* display: grid;
-        grid-template-areas: 
-        "logo title"
-        "logo links"; */
-        /* display: flex; */
-        align-content: center;
         align-items: center;
-        margin: auto;
         max-height: max-content;
-        height: auto;
-    }
-
-    header section.logo {
-        grid-area: logo;
-    }
-
-    header section.title{
-        grid-area: title;
-        display: flex;
     }
 
     header img {
@@ -358,7 +336,6 @@ footer a {
     }
 
     header h1 {
-        font-size: 1.5rem;
         display: none;
     }
 
@@ -367,8 +344,6 @@ footer a {
     }
 
     .nav-links {
-        display: inline-flex;
-        grid-area: links;
         translate: 0px;
         flex-direction: row;
         min-height: 1vw;
@@ -391,7 +366,7 @@ footer a {
         width: max-content;
         color: rgb(255, 255, 255);
         font-size: 1rem;
-        align-items: center;
+        /* align-items: center; */
         justify-content: center;
         align-content: center;
         padding: 0;
@@ -410,8 +385,6 @@ footer a {
     header ul.nav-links .menu-link {
         width: max-content;
         background-color: transparent;
-        /* padding: 0; */
-
     }
 
     .nav-links .current-page {
