@@ -148,14 +148,6 @@ nav {
 }
 
 #hamburger {
-    height: 40px;
-    width: 40px;
-    position: relative;
-    appearance: none;
-    -webkit-border-radius: 0px;
-    border-radius: 50%;
-    border: 2px solid rgb(255, 255, 255);
-    background-color: var(--transparent);
     display: none;
 }
 
@@ -167,8 +159,8 @@ nav .hamburger-btn {
     margin: auto;
     align-self: center;
     justify-self: center;
-    min-height: 40px;
-    min-width: 40px;
+    min-height: 6.5vw;
+    min-width: 6.5vw;
     position: relative;
     appearance: none;
     -webkit-border-radius: 0px;
@@ -232,12 +224,15 @@ nav .hamburger-btn {
     font-size: 2em;
     background-color: #1c478e;
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     position: fixed;
-    translate: 100vw;
+    translate: 45vw;
     list-style: none;
     transition: .2s ease-out;
-    padding-right: 1vw;
+    /* padding-right: 1vw; */
+    padding-inline-start: 10px;
+    margin-block: 0;
+    will-change: transform;
 }
 
 .nav-links li {
@@ -255,7 +250,7 @@ nav .hamburger-btn {
 
 .hamburger:checked ~ .nav-links {
     transition: .2s ease-in; 
-    translate: -94vw;
+    translate: -89.5vw;
     box-sizing: content-box;
 }
 
@@ -350,6 +345,7 @@ footer a {
         position: relative;
         margin: auto 0 auto auto;
         padding: 0;
+        width: 100%;
         align-content: center;
         transition: none;
     }
@@ -366,11 +362,7 @@ footer a {
         width: max-content;
         color: rgb(255, 255, 255);
         font-size: 1rem;
-        /* align-items: center; */
-        justify-content: center;
-        align-content: center;
         padding: 0;
-        margin: 0;
     }
 
     header .nav-links li a:hover {

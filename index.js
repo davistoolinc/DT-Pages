@@ -28,7 +28,7 @@ function findCurrPage() {
     const linkList = document.querySelectorAll('.menu-link') // I don't like this is done twice.. 
     const urlList = []
     linkList.forEach(item => urlList.push(item.getAttribute('href')))
-    const isCurrURL = url => url === currURL[3]
+    const isCurrURL = url => url === currURL[3] || url === currURL[2]
     return urlList.findIndex(isCurrURL)
 }
 
