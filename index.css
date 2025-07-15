@@ -57,6 +57,7 @@ body {
     background: var(--main-background);
     background-size: cover;
     font-family: "Sawarabi Gothic",  Georgia, 'Times New Roman', Times, serif;
+    min-height: 100vh;
 }
 
 section.title h1 {
@@ -295,7 +296,7 @@ article {
 }
 
 footer {
-    position: sticky;
+    position: fixed;
     bottom: 0;
     display: flex;
     font-size: .8em;
