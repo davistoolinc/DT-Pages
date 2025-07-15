@@ -5,7 +5,6 @@ const addressSection = document.getElementById('address')
 const dateObject = new Date()
 const currentYear = dateObject.getFullYear()
 const title = document.title
-const currURL = window.location.href.split('/')
 
 renderContent()
 

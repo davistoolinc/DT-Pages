@@ -57,7 +57,6 @@ body {
     background: var(--main-background);
     background-size: cover;
     font-family: "Sawarabi Gothic",  Georgia, 'Times New Roman', Times, serif;
-    /* min-height: 100vh; */
 }
 
 section.title h1 {
@@ -124,10 +123,6 @@ header {
     max-height: 13dvh;
     box-shadow: 1px 1px 10px black;
     justify-content: space-between;
-}
-
-header section > * {
-    max-width: 100%;
 }
 
 header section {
@@ -234,7 +229,7 @@ nav .hamburger-btn {
     padding-right: 4vw;
     padding-inline-start: 10px;
     margin-block: 0;
-    will-change: transform;
+    will-change: translate;
 }
 
 .nav-links li {
@@ -252,7 +247,7 @@ nav .hamburger-btn {
 
 .hamburger:checked ~ .nav-links {
     transition: .2s ease-in; 
-    translate: calc(-96vw + 40px); 
+    translate: calc(-96vw + 40px); /*These numbers come from the header margin (4vw) and the size of the closest elements (.hamburger-btn) width*/
     box-sizing: content-box;
 }
 
@@ -300,11 +295,9 @@ article {
 }
 
 footer {
-    /* margin-top: auto; */
     position: sticky;
     bottom: 0;
     display: flex;
-    /* min-height: 7%; */
     font-size: .8em;
     width: 100%;
     align-items: center;
@@ -328,10 +321,6 @@ footer a {
         max-height: max-content;
     }
 
-    header > * {
-        max-width: none;
-    }
-    
     header img {
         max-height: 14dvh;
     }
