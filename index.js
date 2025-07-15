@@ -15,7 +15,6 @@ function renderContent() {
     renderHeader()
     renderFooter()
     changeCurrLink()
-    // changeCurrLink()
 }
 
 function changeCurrLink() {
@@ -75,7 +74,11 @@ function renderNavLinks() {
     `
 }
 
+hamburgerCheckbox.addEventListener('change', () => {
+    hamburgerCheckbox.checked ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'
+})
+
 window.addEventListener('resize', () => {
-    window.innerWidth > 768 ? hamburgerCheckbox.checked = false : ''
+    window.innerWidth > 768 ? (hamburgerCheckbox.checked = false) & (document.body.style.overflow = 'auto') : ''
 }, true)
 

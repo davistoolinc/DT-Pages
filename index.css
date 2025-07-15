@@ -57,7 +57,7 @@ body {
     background: var(--main-background);
     background-size: cover;
     font-family: "Sawarabi Gothic",  Georgia, 'Times New Roman', Times, serif;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 section.title h1 {
@@ -73,7 +73,6 @@ section.title h1 {
 header, footer {
     background: var(--davis-blue-background2);
     color: var(--info-text);
-    padding: 1vw 4vw;
     z-index: 1;
 }
 
@@ -119,6 +118,7 @@ header {
     display: flex;
     position: sticky;
     top: 0;
+    padding: 1vh 4vw;
     height: 11dvh;
     min-height: 100px;
     max-height: 13dvh;
@@ -126,8 +126,12 @@ header {
     justify-content: space-between;
 }
 
+header section > * {
+    max-width: 100%;
+}
+
 header section {
-    display: grid;
+    display: flex;
     justify-content: center;
     justify-items: center;
     align-items: center;
@@ -139,8 +143,6 @@ header section {
 
 header img {
     align-self: center;
-    max-height: 50%;
-    min-height: 30px;
 }
 
 nav {
@@ -159,8 +161,8 @@ nav .hamburger-btn {
     margin: auto;
     align-self: center;
     justify-self: center;
-    min-height: 6.5vw;
-    min-width: 6.5vw;
+    min-height: 40px;
+    min-width: 40px;
     position: relative;
     appearance: none;
     -webkit-border-radius: 0px;
@@ -229,7 +231,7 @@ nav .hamburger-btn {
     translate: 45vw;
     list-style: none;
     transition: .2s ease-out;
-    /* padding-right: 1vw; */
+    padding-right: 4vw;
     padding-inline-start: 10px;
     margin-block: 0;
     will-change: transform;
@@ -250,7 +252,7 @@ nav .hamburger-btn {
 
 .hamburger:checked ~ .nav-links {
     transition: .2s ease-in; 
-    translate: -89.5vw;
+    translate: calc(-96vw + 40px); 
     box-sizing: content-box;
 }
 
@@ -267,7 +269,7 @@ ul.nav-links .menu-link {
 body main {
     display: flex;
     flex-direction: column;
-    margin: 3vh auto;
+    margin: 3vh auto 1vh;
     align-items: center;
     font-size: .875rem;
     background-color: var(--main-background);
@@ -298,18 +300,22 @@ article {
 }
 
 footer {
-    margin-top: auto;
+    /* margin-top: auto; */
+    position: sticky;
+    bottom: 0;
     display: flex;
-    min-height: 7%;
+    /* min-height: 7%; */
     font-size: .8em;
     width: 100%;
     align-items: center;
     text-align: center;
+    margin: 0;
+    padding: 2vw 4vw;
 }
 
 footer a {
     color: white;
-    padding: 10px;
+    padding: 0 10px ;
 }
 
 @media only screen and (min-width: 768px) {
@@ -322,6 +328,10 @@ footer a {
         max-height: max-content;
     }
 
+    header > * {
+        max-width: none;
+    }
+    
     header img {
         max-height: 14dvh;
     }
