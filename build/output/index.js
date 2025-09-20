@@ -1,3 +1,4 @@
+/* 1750637940039 */
 const header = document.getElementById('header')
 const footer = document.getElementById('footer')
 const copyrightArea = document.getElementById('copyright')
@@ -8,25 +9,14 @@ const title = document.title
 
 renderContent()
 
-const hamburgerCheckbox = document.getElementById('hamburger')
-
 function renderContent() {
     renderHeader()
     renderFooter()
-    changeCurrLink()
 }
-
-function changeCurrLink() {
-    const linkList = document.querySelectorAll('.menu-link')
-    linkList.forEach(link => {
-        link.innerText === title ? link.classList.add('current-page') : ''
-    })
-}
-
 
 function renderHeader() {
  header.innerHTML = `
-    <section class="logo">
+    <section >
         <img src="Pictures/logo-img.jpg" alt="Davis Tool Incorporated logo">
     </section>
 
@@ -41,10 +31,16 @@ function renderHeader() {
             <span class="nav-btn"></span>
             <span class="nav-btn"></span>
         </label>
+        
+        <ul class="large-nav hidden">
+            ${renderNavLinks()}
+        </ul>
 
         <ul class="nav-links">
             ${renderNavLinks()}
         </ul>
+
+        
     </nav>
 `
 }
@@ -72,12 +68,3 @@ function renderNavLinks() {
         <li><a class="menu-link" href="contact.html">Contact Us</a></li>
     `
 }
-
-hamburgerCheckbox.addEventListener('change', () => {
-    hamburgerCheckbox.checked ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'
-})
-
-window.addEventListener('resize', () => {
-    window.innerWidth > 768 ? (hamburgerCheckbox.checked = false) & (document.body.style.overflow = 'auto') : ''
-}, true)
-

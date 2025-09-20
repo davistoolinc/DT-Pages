@@ -1,3 +1,4 @@
+/* 1750637282907 */
 :root {
     --info-text: white;
     --main-background: white;
@@ -11,7 +12,7 @@
     box-sizing: border-box;
 }
 
-/* Icomoon Imports */
+
 @font-face {
     font-family: 'icomoon';
     src:  url('fonts/icomoon.eot?11yix9');
@@ -25,7 +26,7 @@
   }
   
   [class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
+    
     font-family: 'icomoon' !important;
     speak: never;
     font-style: normal;
@@ -34,7 +35,7 @@
     text-transform: none;
     line-height: 1;
   
-    /* Better Font Rendering =========== */
+    
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -48,7 +49,7 @@
   .icon-location:before {
     content: "\e947";
   }
-/* End Icomoon imports */
+
 
 body {
     display: flex;
@@ -57,6 +58,7 @@ body {
     background: var(--main-background);
     background-size: cover;
     font-family: "Sawarabi Gothic",  Georgia, 'Times New Roman', Times, serif;
+    min-height: 100vh;
 }
 
 section.title h1 {
@@ -64,14 +66,21 @@ section.title h1 {
 }
 
  h2 {
+    
     max-width: 500px;
     text-align: center;
     margin: 15px auto;
 }
 
+
+
+
+
+
 header, footer {
     background: var(--davis-blue-background2);
     color: var(--info-text);
+    padding: 1rem 1.2rem;
     z-index: 1;
 }
 
@@ -94,6 +103,7 @@ h2, main img, main iframe {
 
 iframe {
     width: 70vw !important;
+    
     height: 40vh;
 }
 
@@ -117,27 +127,29 @@ header {
     display: flex;
     position: sticky;
     top: 0;
-    padding: 1vh 4vw;
     height: 11dvh;
     min-height: 100px;
     max-height: 13dvh;
+    width: 100%;
     box-shadow: 1px 1px 10px black;
     justify-content: space-between;
 }
 
+
 header section {
-    display: flex;
+    display: grid;
     justify-content: center;
     justify-items: center;
     align-items: center;
 }
-
 .copyright, footer .right-aligned, header img, header section.title {
     z-index: 1;
 }
 
 header img {
     align-self: center;
+    max-height: 50%;
+    min-height: 30px;
 }
 
 nav {
@@ -145,6 +157,14 @@ nav {
 }
 
 #hamburger {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    appearance: none;
+    -webkit-border-radius: 0px;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: var(--transparent);
     display: none;
 }
 
@@ -154,18 +174,15 @@ nav .hamburger-btn:hover {
 
 nav .hamburger-btn {
     margin: auto;
-    align-self: center;
-    justify-self: center;
-    min-height: 40px;
-    min-width: 40px;
+    height: 40px;
+    width: 40px;
     position: relative;
     appearance: none;
     -webkit-border-radius: 0px;
     border-radius: 50%;
     border: 2px solid rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.137);
-    z-index: 1;
-}
+    }
 
 .hamburger-btn span {
     display: block;
@@ -173,7 +190,7 @@ nav .hamburger-btn {
     width: 60%;
     background-color: rgb(245, 245, 245);
     border-radius: 25px;
-    position: absolute;
+    position:absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -218,22 +235,19 @@ nav .hamburger-btn {
     align-items: center;
     text-align: center;
     justify-content: center;
-    font-size: 2em;
+    font-size: 2rem;
     background-color: #1c478e;
     min-height: 100vh;
-    width: 100vw;
+    width: calc(100vw + 10vw);
     position: fixed;
-    translate: 45vw;
+    translate: 100vw;
     list-style: none;
+    z-index: -1;
     transition: .2s ease-out;
-    padding-right: 4vw;
-    padding-inline-start: 10px;
-    margin-block: 0;
-    will-change: translate;
 }
 
 .nav-links li {
-    margin: 2vh 0;
+    margin: 2.5%;
 }
 
 .nav-links li a {
@@ -247,8 +261,9 @@ nav .hamburger-btn {
 
 .hamburger:checked ~ .nav-links {
     transition: .2s ease-in; 
-    translate: calc(-96vw + 40px); /*These numbers come from the header margin (4vw) and the size of the closest elements (.hamburger-btn) width*/
+    translate: -100vw;
     box-sizing: content-box;
+    
 }
 
 ul.nav-links .menu-link {
@@ -264,10 +279,11 @@ ul.nav-links .menu-link {
 body main {
     display: flex;
     flex-direction: column;
-    margin: 3vh auto 6vh;
+    margin: 3vh auto;
     align-items: center;
     font-size: .875rem;
     background-color: var(--main-background);
+    
 }
 
 main p {
@@ -295,29 +311,27 @@ article {
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
+    margin-top: auto;
     display: flex;
+    min-height: 7%;
     font-size: .8em;
     width: 100%;
     align-items: center;
     text-align: center;
-    padding: 1vh 4vw;
 }
 
 footer a {
     color: white;
-    padding: 0 10px ;
+    padding: 10px;
 }
 
 @media only screen and (min-width: 768px) {
-    .hamburger {
+    .hamburger, .nav-links {
         display: none;
     }
 
-    header {
-        align-items: center;
-        max-height: max-content;
+    header section {
+        display: flex;
     }
 
     header img {
@@ -325,59 +339,48 @@ footer a {
     }
 
     header nav {
+        align-content: flex-end;
         justify-content: center;
-    }
-
-    header h1 {
-        display: none;
     }
 
     nav .hamburger-btn {
         display: none;
     }
 
-    .nav-links {
-        translate: 0px;
-        flex-direction: row;
-        min-height: 1vw;
-        position: relative;
+    header .large-nav {
+        display: flex;
         margin: auto 0 auto auto;
-        padding: 0;
-        width: 100%;
-        align-content: center;
-        transition: none;
     }
 
-    header .nav-links li {
+    header .large-nav li {
         list-style: none;
-        padding: 0 1vw ;
-        width: max-content;
-        margin: auto;
+        height: 90%;
+        padding: 0 1vw 0;
         border-right: 2px solid rgb(255, 255, 255);
     }
 
-    header .nav-links li a {
-        width: max-content;
-        color: rgb(255, 255, 255);
-        font-size: 1rem;
-        padding: 0;
-    }
-
-    header .nav-links li a:hover {
-        color: yellow;
-        text-decoration: underline;
-    }
-
-    header .nav-links :last-child {
+    header .large-nav :last-child {
         border-right: none;
     }
 
-    header ul.nav-links .menu-link {
-        width: max-content;
-        background-color: transparent;
+    header .large-nav a {
+        font-size: 1.1em;
+        padding: 5px;
+        align-content: center;
+        min-width: max-content;
+        color: rgb(255, 255, 255);
+        text-shadow: 1px 1px 1px black;
     }
 
-    .nav-links .current-page {
-        color: rgb(233, 233, 16);
+    header .large-nav a:hover {
+        cursor: pointer;
+        color: rgb(252, 255, 156);
+        transition: .6s;
+        font-weight: bolder;
+        text-decoration: underline;
+    }
+
+    header .large-nav a:active {
+        box-shadow: inset -1px -1px 1px black;
     }
 }
